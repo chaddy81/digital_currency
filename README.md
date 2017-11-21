@@ -1,6 +1,6 @@
 # DigitalCurrency
 
-Original inspiration came from (CoinMon)[https://github.com/bichenkk/coinmon]
+Original inspiration came from [Coinmon](https://github.com/bichenkk/coinmon)
 
 In order to use, run 
 ```
