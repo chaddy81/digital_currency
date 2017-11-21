@@ -1,5 +1,7 @@
 # DigitalCurrency
 
+Original inspiration came from (CoinMon)[https://github.com/bichenkk/coinmon]
+
 In order to use, run 
 ```
 mix escript.build
