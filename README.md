@@ -1,21 +1,11 @@
 # DigitalCurrency
 
-**TODO: Add description**
-
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `digital_currency` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:digital_currency, "~> 0.1.0"}
-  ]
-end
+In order to use, run 
 ```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/digital_currency](https://hexdocs.pm/digital_currency).
-
+mix escript.build
+```
+to build the script.  From there, you can run the script with 
+```
+./digital_currency
+```
+and pass in the following options to use differeny currencies or limit the amount of returned results.
