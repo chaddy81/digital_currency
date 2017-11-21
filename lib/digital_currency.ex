@@ -24,7 +24,7 @@ defmodule DigitalCurrency.Cli do
               %{currency: currency, limit: limit}
             {[limit: limit, currency: currency], _, _} ->
               %{limit: limit, currency: currency}
-            _ -> ""
+            _ -> %{}
           end
 
     args
@@ -36,7 +36,7 @@ defmodule DigitalCurrency.Cli do
     currency = case Map.has_key? args, :currency do
                   true ->
                     currency(args.currency)
-                  _ ->
+                  false ->
                     :USD
                 end
 
@@ -59,7 +59,7 @@ defmodule DigitalCurrency.Cli do
 
     rows = Enum.map(body, fn(coin) -> 
             price = Money.parse!(coin["#{price_string}"], currency)
-            [coin["rank"],"💵 #{coin["symbol"]}", price, "#{coin["percent_change_1h"]}%", "#{coin["percent_change_24h"]}%", "#{coin["percent_change_7d"]}%"]
+            [coin["rank"],"💵  #{coin["symbol"]}", price, "#{coin["percent_change_1h"]}%", "#{coin["percent_change_24h"]}%", "#{coin["percent_change_7d"]}%"]
           end)
 
     d = Timex.local
