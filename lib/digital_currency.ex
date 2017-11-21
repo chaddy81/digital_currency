@@ -31,7 +31,7 @@ defmodule DigitalCurrency.Cli do
   end
 
   defp run(args) do
-    IO.puts "Running \n"
+    CliSpinners.spin :dots7, 3000
     
     currency = case Map.has_key? args, :currency do
                   true ->
@@ -64,7 +64,7 @@ defmodule DigitalCurrency.Cli do
 
     d = Timex.local
 
-    IO.puts "Last checked #{d |> Timex.format!("{h12}:{m}:{s} {AM}")}"
+    IO.puts "\nLast checked #{d |> Timex.format!("{h12}:{m}:{s} {AM}")}"
 
     Table.new(rows, header)
     |> Table.put_title(title)

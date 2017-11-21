@@ -31,7 +31,9 @@ defmodule DigitalCurrency.Mixfile do
       {:table_rex, "~> 0.10"},
       {:money, "~> 1.2.1"},
       {:timex, "~> 3.0"},
-      {:html_entities, "~> 0.3"}
+      {:html_entities, "~> 0.3"},
+      {:tzdata, "~> 0.1.8"},
+      {:cli_spinners, "~> 0.1.0"}
     ]
   end
 end
